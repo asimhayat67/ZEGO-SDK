@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layout_pip"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/gray_555">
+
+      <com.zegocloud.demo.bestpractice.components.ZEGOAudioVideoView
+        android:id="@+id/other_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <com.google.android.material.card.MaterialCardView
+      android:layout_width="96dp"
+      android:layout_height="128dp"
+      android:layout_marginStart="12dp"
+      android:layout_marginTop="48dp"
+      android:layout_marginEnd="12dp"
+      android:layout_marginBottom="72dp"
+      app:cardBackgroundColor="@color/gray_444"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+      <com.zegocloud.demo.bestpractice.components.ZEGOAudioVideoView
+        android:id="@+id/self_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    </com.google.android.material.card.MaterialCardView>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.viewpager2.widget.ViewPager2
+    android:id="@+id/view_pager"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintDimensionRatio="18:16"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+  </androidx.viewpager2.widget.ViewPager2>
+
+
+<!--  <com.google.android.material.button.MaterialButton-->
+<!--    android:id="@+id/add_button"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginBottom="96dp"-->
+<!--    android:text="add"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintStart_toStartOf="parent"/>-->
+
+<!--  <com.google.android.material.button.MaterialButton-->
+<!--    android:id="@+id/remove_button"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginBottom="164dp"-->
+<!--    android:text="remove"-->
+<!--    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--    app:layout_constraintEnd_toEndOf="parent"-->
+<!--    app:layout_constraintStart_toStartOf="parent"/>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
